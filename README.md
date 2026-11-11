@@ -118,5 +118,5 @@ engines can read them. To change a range, edit `RANGE_INFO` in the generator, or
 
 ## Catalogue and map (v6)
 - `catalogue.html` lists every design code, finish and size from the 2026 product catalogue (88 swatches in `img/catalogue/`). Each card opens WhatsApp with the code in the message. Prices stay off until MissReno confirms.
-- Showroom and Contact use a custom teal-tinted map (CARTO light tiles, OpenStreetMap data) with a pin at 5.9891851, 116.1281055. Change `LAT`, `LNG` and `MZ` in the generator to adjust it. Attribution is kept in the corner.
+- Showroom and Contact use a custom teal-tinted map (OpenStreetMap tiles, no API key needed) with a pin at 5.9891851, 116.1281055. Change `LAT`, `LNG` and `MZ` in the generator to adjust it. Attribution is kept in the corner.
 - Google review count now reads 91; confirm against the Google profile before launch.

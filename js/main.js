@@ -27,6 +27,7 @@
     drawer.setAttribute('aria-hidden', open ? 'false' : 'true');
     openBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
     d.body.style.overflow = open ? 'hidden' : '';
+    d.body.classList.toggle('menu-open', open);
     (open ? closeBtn : openBtn).focus();
   }
   if (drawer && openBtn && closeBtn) {
@@ -34,6 +35,7 @@
     closeBtn.addEventListener('click', function () { setMenu(false); });
     $$('a', drawer).forEach(function (a) { a.addEventListener('click', function () { setMenu(false); }); });
     addEventListener('keydown', function (e) { if (e.key === 'Escape' && drawer.classList.contains('open')) setMenu(false); });
+    d.addEventListener('click', function (e) { if (drawer.classList.contains('open') && !drawer.contains(e.target) && !openBtn.contains(e.target)) setMenu(false); });
   }
 
   /* ---- Scroll: header firms up after the top; hero photo drifts ---- */
