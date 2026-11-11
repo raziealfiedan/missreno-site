@@ -16,9 +16,8 @@
 - [Styles and ranges](https://missreno.com/styles.html): Eight product ranges with photos and sizes
 - [Product catalogue](https://missreno.com/catalogue.html): Every design code with its finish and size, by range
 - [Projects](https://missreno.com/projects.html): Real wall and ceiling upgrades across Sabah
-- [Showroom](https://missreno.com/showroom.html): Address, hours and what to expect
+- [Showroom and contact](https://missreno.com/showroom.html): Address, hours, WhatsApp, email and a quote form
 - [For trade](https://missreno.com/trade.html): Trade accounts for contractors, designers and businesses
-- [Contact](https://missreno.com/contact.html): WhatsApp, email and a quote form
 
 ## Services
 - **Feature walls**: Fluted, stone-look and marble-look walls that turn a plain wall into the centre of the room.

@@ -957,3 +957,4 @@ body.rm-lock{overflow:hidden}
 .fi.soc a{display:grid;grid-template-columns:36px 1fr;gap:12px;align-items:start;background:none;padding:0}
 .fi.soc a:hover .ic{background:var(--teal);color:var(--deep);transform:scale(1.08)}
 @media (max-width:760px){.fi.soc a{display:block}}
+#contact{scroll-margin-top:100px}
