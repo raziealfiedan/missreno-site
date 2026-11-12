@@ -37,15 +37,15 @@ These are marked in the code with a comment or a bracket and must not go live un
 | Showroom products | Homepage hero stats | 60+ |
 | Quote turnaround | Hero stats, FAQ | 24 hours |
 | Reply time | Homepage, contact, closing block | within 2 hours, Mon to Sat |
-| Google rating | Hero stats and reviews badge | 4.8 from 88 reviews. It is NOT in the search data (JSON-LD) on purpose: add `aggregateRating` only once it is checked against Google |
+| Google rating | Hero stats and reviews badge | 4.8 from 91 reviews (checked on Google Maps 12/11/26). It is NOT in the search data (JSON-LD) on purpose: add `aggregateRating` only once it is checked against Google |
 | Reviews | Homepage reviews | Copied from the live site. Check each against Google |
 | Client and partner logos | Homepage, Styles and Projects pages | Show only companies MissReno has actually supplied, to avoid misrepresentation. Jess to advise which logos stay. Logos are the ones on the current missreno.com. Names were read from the file names or the images: check them. Partner logo 5 (dark badge) and client logo 23 have no name yet |
 | Range photos | Styles page | Taken from the company profile and catalogue. Check each photo sits under the right range |
 | Sample chips | Homepage, Styles page | Free in Sabah. Large boards: deposit rule not stated |
 | FAQ answers | Homepage | "Is it messy?" and "How long does installation take?" use safe wording |
-| Feature wall "starts from" price | FAQ (`PRICE_FROM` in `gen.py`) | Shows RMXXX. Replace with the real starting price. No promo prices are used, so nothing expires |
+| Feature wall cost FAQ | FAQ in `gen.py` | No price shown for now. Add a starting price later only if MissReno asks |
 | Showroom area name | Whole site | "Kian Yap" is now "Kolombong" everywhere, including the address line and map link. Jess to confirm the full postal address wording |
-| Email for sales enquiries | Footer, showroom, contact | admin@missreno.com. Jess to confirm this is the address to use |
+| Email for sales enquiries | Footer, showroom, contact | sales@missreno.com (confirmed)|
 | Project galleries | `gallery-*.html` | Photos come from the existing project and range photos. Add more by listing them in `GALLERIES` in `gen.py` |
 | Trade terms | Trade page | Business registration shown once |
 | Social links | Footer | Based on the handles found on the live site |
