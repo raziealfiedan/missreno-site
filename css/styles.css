@@ -979,3 +979,7 @@ body.rm-lock{overflow:hidden}
 .lb button:hover{background:rgba(255,255,255,.28)}
 .lb .lb-x{top:18px;right:18px}.lb .lb-p{left:14px;top:50%}.lb .lb-n{right:14px;top:50%}
 @media(max-width:600px){.gal{columns:2 150px;column-gap:12px}.gal-item{margin-bottom:12px}.lb .lb-p,.lb .lb-n{top:auto;bottom:18px}.lb .lb-p{left:calc(50% - 56px)}.lb .lb-n{right:calc(50% - 56px)}}
+
+/* Hero brand name */
+.hero-brand{margin:22px 0 0;font-family:'Unbounded','Plus Jakarta Sans',sans-serif;font-weight:700;font-size:clamp(1.5rem,3.2vw,2.4rem);line-height:1;letter-spacing:-.01em;color:#6FD6E4;text-shadow:0 2px 24px rgba(6,26,34,.35)}
+.hero-brand+h1{margin-top:12px}
