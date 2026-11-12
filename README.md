@@ -39,11 +39,14 @@ These are marked in the code with a comment or a bracket and must not go live un
 | Reply time | Homepage, contact, closing block | within 2 hours, Mon to Sat |
 | Google rating | Hero stats and reviews badge | 4.8 from 88 reviews. It is NOT in the search data (JSON-LD) on purpose: add `aggregateRating` only once it is checked against Google |
 | Reviews | Homepage reviews | Copied from the live site. Check each against Google |
-| Client and partner logos | Homepage, Styles and Projects pages | Logos are the ones on the current missreno.com. Names were read from the file names or the images: check them. Partner logo 5 (dark badge) and client logo 23 have no name yet |
+| Client and partner logos | Homepage, Styles and Projects pages | Show only companies MissReno has actually supplied, to avoid misrepresentation. Jess to advise which logos stay. Logos are the ones on the current missreno.com. Names were read from the file names or the images: check them. Partner logo 5 (dark badge) and client logo 23 have no name yet |
 | Range photos | Styles page | Taken from the company profile and catalogue. Check each photo sits under the right range |
 | Sample chips | Homepage, Styles page | Free in Sabah. Large boards: deposit rule not stated |
 | FAQ answers | Homepage | "Is it messy?" and "How long does installation take?" use safe wording |
-| Christmas promo | FAQ | RM1,899, 1 to 30 Nov 2026. Remove after 30/11/26 |
+| Feature wall "starts from" price | FAQ (`PRICE_FROM` in `gen.py`) | Shows RMXXX. Replace with the real starting price. No promo prices are used, so nothing expires |
+| Showroom area name | Whole site | "Kian Yap" is now "Kolombong" everywhere, including the address line and map link. Jess to confirm the full postal address wording |
+| Email for sales enquiries | Footer, showroom, contact | admin@missreno.com. Jess to confirm this is the address to use |
+| Project galleries | `gallery-*.html` | Photos come from the existing project and range photos. Add more by listing them in `GALLERIES` in `gen.py` |
 | Trade terms | Trade page | Business registration shown once |
 | Social links | Footer | Based on the handles found on the live site |
 | "Open now" chip | Homepage hero, `open` in `js/main.js` | Works out Mon to Sat, 8:30 AM to 5:00 PM in Kota Kinabalu time. It does not know public holidays |

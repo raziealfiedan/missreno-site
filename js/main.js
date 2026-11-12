@@ -414,3 +414,28 @@
   /* ---- Footer year ---- */
   var y = $('#year'); if (y) y.textContent = new Date().getFullYear();
 })();
+
+/* project gallery lightbox: tap a photo to see it larger, arrows or swipe buttons to move, Esc to close */
+(function () {
+  var links = [].slice.call(document.querySelectorAll('a[data-lb]'));
+  if (!links.length) return;
+  var box, img, cur = 0, last = null;
+  function show(i) {
+    cur = (i + links.length) % links.length;
+    img.src = links[cur].getAttribute('href');
+    img.alt = (links[cur].querySelector('img') || {}).alt || '';
+  }
+  function close() { if (box) { box.remove(); box = null; document.removeEventListener('keydown', key); if (last) last.focus(); } }
+  function key(e) { if (e.key === 'Escape') close(); else if (e.key === 'ArrowRight') show(cur + 1); else if (e.key === 'ArrowLeft') show(cur - 1); }
+  function open(i) {
+    last = document.activeElement;
+    box = document.createElement('div'); box.className = 'lb'; box.setAttribute('role', 'dialog'); box.setAttribute('aria-modal', 'true'); box.setAttribute('aria-label', 'Project photo');
+    box.innerHTML = '<img alt=""><button class="lb-x" type="button" aria-label="Close">&times;</button><button class="lb-p" type="button" aria-label="Previous photo">&#8249;</button><button class="lb-n" type="button" aria-label="Next photo">&#8250;</button>';
+    img = box.querySelector('img');
+    box.addEventListener('click', function (e) { if (e.target === box || e.target.classList.contains('lb-x')) close(); });
+    box.querySelector('.lb-p').addEventListener('click', function () { show(cur - 1); });
+    box.querySelector('.lb-n').addEventListener('click', function () { show(cur + 1); });
+    document.body.appendChild(box); document.addEventListener('keydown', key); show(i); box.querySelector('.lb-x').focus();
+  }
+  links.forEach(function (a, i) { a.addEventListener('click', function (e) { e.preventDefault(); open(i); }); });
+})();

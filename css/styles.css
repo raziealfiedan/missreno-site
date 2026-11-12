@@ -959,3 +959,23 @@ body.rm-lock{overflow:hidden}
 @media (max-width:760px){.fi.soc a{display:block}}
 #contact{scroll-margin-top:100px}
 .cc-col{display:grid;gap:28px;align-content:start}
+
+/* ---- project galleries */
+.galnav{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:28px}
+.galnav span{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2);margin-right:6px}
+.galnav a{padding:9px 16px;border-radius:999px;border:1px solid rgba(6,26,34,.16);font-size:14.5px;font-weight:600;text-decoration:none;color:var(--ink);transition:background .25s,color .25s,border-color .25s}
+.galnav a:hover,.galnav a[aria-current]{background:var(--deep);color:#fff;border-color:var(--deep)}
+.gal{columns:3 300px;column-gap:18px}
+.gal-item{margin:0 0 18px;break-inside:avoid;scroll-margin-top:110px}
+.gal-item a{display:block;border-radius:var(--r-lg);overflow:hidden;background:var(--paper);cursor:zoom-in}
+.gal-item img{width:100%;height:auto;display:block;transition:transform 1.2s var(--ease)}
+.gal-item a:hover img{transform:scale(1.04)}
+.gal-item figcaption{font-size:15px;font-weight:600;line-height:1.4;padding:10px 4px 0}
+.gal-item:target a{outline:3px solid var(--teal);outline-offset:3px}
+.gal-foot{display:grid;gap:18px;justify-items:start;margin-top:36px;padding-top:32px;border-top:1px solid rgba(6,26,34,.12)}
+.lb{position:fixed;inset:0;z-index:300;display:grid;place-items:center;background:rgba(3,14,19,.92);padding:24px}
+.lb img{max-width:min(94vw,1200px);max-height:88vh;object-fit:contain;border-radius:12px}
+.lb button{position:absolute;width:48px;height:48px;border-radius:50%;border:0;background:rgba(255,255,255,.14);color:#fff;font-size:26px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.lb button:hover{background:rgba(255,255,255,.28)}
+.lb .lb-x{top:18px;right:18px}.lb .lb-p{left:14px;top:50%}.lb .lb-n{right:14px;top:50%}
+@media(max-width:600px){.gal{columns:2 150px;column-gap:12px}.gal-item{margin-bottom:12px}.lb .lb-p,.lb .lb-n{top:auto;bottom:18px}.lb .lb-p{left:calc(50% - 56px)}.lb .lb-n{right:calc(50% - 56px)}}
