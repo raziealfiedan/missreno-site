@@ -44,7 +44,7 @@ These are marked in the code with a comment or a bracket and must not go live un
 | Sample chips | Homepage, Styles page | Free in Sabah. Large boards: deposit rule not stated |
 | FAQ answers | Homepage | "Is it messy?" and "How long does installation take?" use safe wording |
 | Feature wall cost FAQ | FAQ in `gen.py` | No price shown for now. Add a starting price later only if MissReno asks |
-| Showroom area name | Whole site | "Kian Yap" is now "Kolombong" everywhere, including the address line and map link. Jess to confirm the full postal address wording |
+| Showroom area name | Whole site | Address now reads "Lot 2, Ground Floor, Lorong Durian 3, Kian Yap Industrial Estate, Jalan Tuaran, Kolombong" (meeting 13/11/26). Jess to confirm the full postal wording |
 | Email for sales enquiries | Footer, showroom, contact | sales@missreno.com (confirmed)|
 | Project galleries | `gallery-*.html` | Photos come from the existing project and range photos. Add more by listing them in `GALLERIES` in `gen.py` |
 | Trade terms | Trade page | Business registration shown once |
@@ -55,14 +55,14 @@ These are marked in the code with a comment or a bracket and must not go live un
 
 The hero plays `video/hero.mp4` if you add that file. If not, it falls back to the video on the current missreno.com storage.
 Please download that video and save it as `video/hero.mp4` so the site does not depend on the old one.
-The still photo `img/hero.webp` shows first and stays if no video can play, so nothing breaks.
+The still photo `img/marble-look-feature-wall-wood-slats-kota-kinabalu.webp` shows first and stays if no video can play, so nothing breaks.
 
 ## Common edits
 
 - **WhatsApp number**: set `whatsapp` in `js/main.js` (form) and the `WA` line in the page files. Search for `60128350133`.
 - **Show prices** ("from RM__"): set `showPrices: true` in `js/main.js`, then replace `RM__` in the style cards.
 - **Save the logos locally (do this once)**: from the site folder run `sh scripts/fetch-logos.sh` (Mac or Linux) or `powershell -ExecutionPolicy Bypass -File scripts\fetch-logos.ps1` (Windows). It saves every client logo into `img/clients/` and every supplier logo into `img/partners/`, so the site no longer depends on the old one.
-- **Client logos**: the logo strip looks for each logo in `img/clients/` first (for example `img/clients/sesb.png`). If the file is not there it loads the same logo from the current missreno.com, and if that fails it shows the name as text. Before the old site is switched off, download the logos from `https://missreno.com/missreno-media/client-logos/` and save them in `img/clients/` with these names: sesb, kis, toyota, proton, suria-sabah, hap-seng, ibis-styles, jesselton-group, sinaland, property-hub, pacific, lido, elemen, dragon-palace, karambunai, kudat, himc-clinic, central-building, cffm, konzepte, mtc, jsk (all `.png`). To add or remove a logo, copy or delete one `<li>` in the strip.
+- **Client logos**: the logo strip looks for each logo in `img/clients/` first (for example `img/clients/sesb.png`). If the file is not there it loads the same logo from the current missreno.com, and if that fails it shows the name as text. Before the old site is switched off, download the logos from `https://missreno.com/missreno-media/client-logos/` and save them in `img/clients/` with these names: sesb, kis, proton, suria-sabah, hap-seng, ibis-styles, jesselton-group, sinaland, property-hub, pacific, lido, elemen, dragon-palace, karambunai, kudat, himc-clinic, central-building, cffm, konzepte, mtc, jsk (all `.png`). To add or remove a logo, copy or delete one `<li>` in the strip.
 - **Range photos**: each range card on the Styles page has a photo slider. Photos are in `img/ranges/` (for example `flexlam-1.webp`). To add one, save it there and add one more `<img>` and one more `<i></i>` dot in that card.
 - **Before and after slider**: the component is ready in `css/styles.css` and `js/main.js`. Add this where wanted, using one matched pair of photos:
 
@@ -75,7 +75,7 @@ The still photo `img/hero.webp` shows first and stays if no video can play, so n
     <input type="range" min="0" max="100" value="50" aria-label="Compare before and after">
   </div>
   ```
-- **Blog**: left out on purpose. Add it back when there are three or more posts.
+- **Renovation guides**: `guides.html` lists 10 English articles (`guide-*.html`), written mainly for search. They are linked from the footer only, not the main menu. To add one, copy a guide page, change the text, and add a card to `guides.html` and a line to `sitemap.xml`.
 - **Photos**: WebP, about 1000 px wide, under 150 KB each. Always write alt text that names the material.
 
 ## Design system
@@ -118,6 +118,13 @@ engines can read them. To change a range, edit `RANGE_INFO` in the generator, or
 - `sitemap.xml` and `robots.txt` (search and AI crawlers allowed). `llms.txt` and `llms-full.txt` give AI assistants a plain-text summary of the business, hours, services, ranges and FAQs.
 - The FAQ answers start with the answer, the Showroom page has an "At a glance" fact list, and the FAQ data matches what is visible on the page.
 - Still to do by MissReno: claim and complete the Google Business Profile with the same name, address, phone and hours; add exact map coordinates to the JSON-LD (`geo`) once confirmed; keep `llms.txt` in step with real prices and opening hours.
+
+## Catalogue (v7, 20/11/26)
+- **One file to edit**: every catalogue item lives in `js/catalogue-data.js`. To add a design, copy one line, change the code, finish and size, and save a square photo as `img/catalogue/<code>.webp`. To remove one, delete its line. The page builds itself from this file.
+- **Large view**: tapping a design opens a large view with the code, finish, size, coverage per piece and the range facts. It does not open WhatsApp. While it is open, the green WhatsApp button carries the design code in its message.
+- **Quantity estimator**: in the large view and in its own section (`catalogue.html#estimate`, or `catalogue.html?range=soffit#estimate` to preselect a range). It rounds up to full pieces and shows no prices, with the disclaimer "Estimated quantity only. For more information, contact our team."
+- **PDF**: `downloads/missreno-product-catalogue-2026.pdf` is the 2026 catalogue from MissReno. Replace the file (same name) when a new one is printed.
+- **Soffit** now has its own section (03708 to 03711). The finish names (pale grey, light, red and dark wood look) describe the swatches; MissReno to confirm the official names.
 
 ## Catalogue and map (v6)
 - `catalogue.html` lists every design code, finish and size from the 2026 product catalogue (88 swatches in `img/catalogue/`). Each card opens WhatsApp with the code in the message. Prices stay off until MissReno confirms.

@@ -2,7 +2,6 @@
 New-Item -ItemType Directory -Force img\clients, img\partners | Out-Null
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_30_sesb-logo.png" -OutFile "img\clients\sesb.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_49_kis-300x300-1.png" -OutFile "img\clients\kis.png"
-Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_32_toyota.png" -OutFile "img\clients\toyota.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_47_proton-300x300-1.png" -OutFile "img\clients\proton.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_33_suria-sabah-300x300-1.png" -OutFile "img\clients\suria-sabah.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_48_jwa_LOGO-hapseng-300x300-1.png" -OutFile "img\clients\hap-seng.png"
@@ -22,7 +21,6 @@ Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_46_jwa_
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_50_konzepte-300x300-1.png" -OutFile "img\clients\konzepte.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_51_mtc-300x300-1.png" -OutFile "img\clients\mtc.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_52_JSK-01-150x150-1.png" -OutFile "img\clients\jsk.png"
-Invoke-WebRequest "https://missreno.com/missreno-media/client-logos/imgi_53_Untitled-2.png" -OutFile "img\clients\client-23.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/logos/4-2.png" -OutFile "img\partners\soliflute.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/logos/3-2.png" -OutFile "img\partners\my-flooring-group.png"
 Invoke-WebRequest "https://missreno.com/missreno-media/logos/6.png" -OutFile "img\partners\apex.png"

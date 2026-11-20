@@ -4,7 +4,6 @@ set -e
 mkdir -p img/clients img/partners
 curl -fsSL -o img/clients/sesb.png "https://missreno.com/missreno-media/client-logos/imgi_30_sesb-logo.png"
 curl -fsSL -o img/clients/kis.png "https://missreno.com/missreno-media/client-logos/imgi_49_kis-300x300-1.png"
-curl -fsSL -o img/clients/toyota.png "https://missreno.com/missreno-media/client-logos/imgi_32_toyota.png"
 curl -fsSL -o img/clients/proton.png "https://missreno.com/missreno-media/client-logos/imgi_47_proton-300x300-1.png"
 curl -fsSL -o img/clients/suria-sabah.png "https://missreno.com/missreno-media/client-logos/imgi_33_suria-sabah-300x300-1.png"
 curl -fsSL -o img/clients/hap-seng.png "https://missreno.com/missreno-media/client-logos/imgi_48_jwa_LOGO-hapseng-300x300-1.png"
@@ -24,7 +23,6 @@ curl -fsSL -o img/clients/cffm.png "https://missreno.com/missreno-media/client-l
 curl -fsSL -o img/clients/konzepte.png "https://missreno.com/missreno-media/client-logos/imgi_50_konzepte-300x300-1.png"
 curl -fsSL -o img/clients/mtc.png "https://missreno.com/missreno-media/client-logos/imgi_51_mtc-300x300-1.png"
 curl -fsSL -o img/clients/jsk.png "https://missreno.com/missreno-media/client-logos/imgi_52_JSK-01-150x150-1.png"
-curl -fsSL -o img/clients/client-23.png "https://missreno.com/missreno-media/client-logos/imgi_53_Untitled-2.png"
 curl -fsSL -o img/partners/soliflute.png "https://missreno.com/missreno-media/logos/4-2.png"
 curl -fsSL -o img/partners/my-flooring-group.png "https://missreno.com/missreno-media/logos/3-2.png"
 curl -fsSL -o img/partners/apex.png "https://missreno.com/missreno-media/logos/6.png"

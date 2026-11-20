@@ -391,13 +391,8 @@
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       var name = form.elements['name'].value.trim();
-      var phone = form.elements['phone'].value.trim();
       var kind = (form.querySelector('input[name=kind]:checked') || {}).value || '';
-      var err = $('#formErr');
-      if (!name || !phone) { err.textContent = 'Please add your name and WhatsApp number.'; return; }
-      if (!/^[+0-9 ()-]{8,}$/.test(phone)) { err.textContent = 'Please check your WhatsApp number.'; return; }
-      err.textContent = '';
-      var msg = 'Hi MissReno, I am ' + name + '. I would like a quote for ' + (kind ? kind.toLowerCase() : 'a wall or ceiling upgrade') + '. My WhatsApp number is ' + phone + '. I will send a photo of my space here.';
+      var msg = 'Hi MissReno' + (name ? ', I am ' + name : '') + '. I would like a quote for ' + (kind ? kind.toLowerCase() : 'a wall or ceiling upgrade') + '. I will send a photo of my space here.';
       window.open(waLink(msg), '_blank', 'noopener');
     });
   }
