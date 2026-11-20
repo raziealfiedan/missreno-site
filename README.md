@@ -124,7 +124,7 @@ engines can read them. To change a range, edit `RANGE_INFO` in the generator, or
 - **Large view**: tapping a design opens a large view with the code, finish, size, coverage per piece and the range facts. It does not open WhatsApp. While it is open, the green WhatsApp button carries the design code in its message.
 - **Quantity estimator**: in the large view and in its own section (`catalogue.html#estimate`, or `catalogue.html?range=soffit#estimate` to preselect a range). It rounds up to full pieces and shows no prices, with the disclaimer "Estimated quantity only. For more information, contact our team."
 - **PDF**: `downloads/missreno-product-catalogue-2026.pdf` is the 2026 catalogue from MissReno. Replace the file (same name) when a new one is printed.
-- **Soffit** now has its own section (03708 to 03711). The finish names (pale grey, light, red and dark wood look) describe the swatches; MissReno to confirm the official names.
+- **Soffit** now has its own section (03708 to 03711). The finish names (pale grey, light, red and dark wood look) describe the swatches and are agreed for now (20/11/26). Resort photos (Langkah Syabas) are approved for use.
 
 ## Catalogue and map (v6)
 - `catalogue.html` lists every design code, finish and size from the 2026 product catalogue (88 swatches in `img/catalogue/`). Each card opens WhatsApp with the code in the message. Prices stay off until MissReno confirms.
